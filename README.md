@@ -1,10 +1,10 @@
-# 🎬 Movie Recommendation Engine - TMDb MVP
+# Movie Recommendation Engine - TMDb MVP
 
-## 📘 Project Overview
+## Project Overview
 
 A simple movie recommendation system powered by **TMDb (The Movie Database) API**. Get real movie data, ratings, and recommendations from the world's largest movie database.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ A simple movie recommendation system powered by **TMDb (The Movie Database) API*
 - **Database Console**: <http://localhost:8080/h2-console>
 - **Health Check**: <http://localhost:8080/actuator/health>
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Movies
 
@@ -46,7 +46,7 @@ A simple movie recommendation system powered by **TMDb (The Movie Database) API*
 - `GET /api/movies/search?title=matrix` - Search TMDb movies
 - `GET /api/movies/rating/603` - Get TMDb rating for specific movie
 
-## 🎯 Example Usage
+## Example Usage
 
 ### Search Movies
 
@@ -60,13 +60,13 @@ curl "http://localhost:8080/api/movies/search?title=matrix"
 curl http://localhost:8080/api/movies/rating/603
 ```
 
-## 🗄️ Database
+## Database
 
 - **H2 in-memory** database for development
 - **Genres only** - Movie data comes from TMDb API
 - **No hardcoded movies** - Pure API-driven approach
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 movie/
@@ -77,16 +77,16 @@ movie/
 └── resources/       # Configuration
 ```
 
-## 🎨 Features
+## Features
 
-- ✅ TMDb API integration
-- ✅ Live movie search with ratings
-- ✅ Real-time movie data
-- ✅ RESTful API with Swagger docs
-- ✅ H2 database with genre categorization
-- ✅ Clean MVP architecture
+- TMDb API integration
+- Live movie search with ratings
+- Real-time movie data
+- RESTful API with Swagger docs
+- H2 database with genre categorization
+- Clean MVP architecture
 
-## 🔮 Example API Response
+## Example API Response
 
 ```json
 {
@@ -103,10 +103,10 @@ movie/
 }
 ```
 
-## 🤝 Contributing
+## Contributing
 
 This is a learning project focused on TMDb API integration and clean architecture.
 
 ---
 
-*Built with ❤️ using Spring Boot + TMDb API* 🍿
+*Built with love using Spring Boot + TMDb API*
