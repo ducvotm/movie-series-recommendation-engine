@@ -1,0 +1,92 @@
+spring:
+  application:
+    name: movie
+
+# ==========================================
+# DATABASE CONFIGURATION (COMMENTED OUT)
+# ==========================================
+# datasource:
+#   url: jdbc:h2:mem:moviedb
+#   driver-class-name: org.h2.Driver
+#   username: sa
+#   password: ""
+#
+# jpa:
+#   database-platform: org.hibernate.dialect.H2Dialect
+#   hibernate:
+#     ddl-auto: create-drop
+#   show-sql: true
+#   defer-datasource-initialization: true
+#
+# sql:
+#   init:
+#     mode: always
+#     data-locations: classpath:data.sql
+#
+# h2:
+#   console:
+#     enabled: true
+#     path: /h2-console
+#     settings:
+#       web-allow-others: false
+
+# ==========================================
+# ACTIVE CONFIGURATION
+# ==========================================
+
+# Server Configuration
+server:
+  port: 8080
+
+# Swagger/OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# TMDb API Configuration (MAIN FUNCTIONALITY)
+tmdb:
+  api-key: ${TMDB_API_KEY:8935e75e4d36add957b7d4f6106293b2}
+# ==========================================
+# LOGGING CONFIGURATION (COMMENTED OUT)
+# ==========================================
+# logging:
+#   level:
+#     org.hibernate.SQL: DEBUG
+#     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+#     duke.movie: DEBUG
+
+# ==========================================
+# PROFILE CONFIGURATIONS (COMMENTED OUT)
+# ==========================================
+# ---
+# # Development Profile
+# spring:
+#   config:
+#     activate:
+#       on-profile: dev
+#   datasource:
+#     url: jdbc:h2:file:./data/moviedb
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#
+# ---
+# # Production Profile
+# spring:
+#   config:
+#     activate:
+#       on-profile: prod
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/moviedb
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#     username: ${DB_USERNAME:movie_user}
+#     password: ${DB_PASSWORD:movie_pass}
+#   jpa:
+#     hibernate:
+#       ddl-auto: validate
+#     show-sql: false
+#   sql:
+#     init:
+#       mode: never
